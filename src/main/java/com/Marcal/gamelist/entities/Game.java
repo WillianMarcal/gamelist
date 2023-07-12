@@ -24,8 +24,12 @@ public class Game {
 	private String genre;
 	private String platforms;
 	private Double score;
-	private String imgUri;
+	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	
@@ -34,7 +38,7 @@ public class Game {
 	}
 
 
-	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUri,
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 		super();
 		this.id = id;
@@ -43,7 +47,7 @@ public class Game {
 		this.genre = genre;
 		this.platforms = platforms;
 		this.score = score;
-		this.imgUri = imgUri;
+		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
@@ -110,12 +114,12 @@ public class Game {
 
 
 	public String getImgUri() {
-		return imgUri;
+		return imgUrl;
 	}
 
 
 	public void setImgUri(String imgUri) {
-		this.imgUri = imgUri;
+		this.imgUrl = imgUri;
 	}
 
 
